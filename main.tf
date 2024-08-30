@@ -48,38 +48,18 @@ resource "tfe_workspace_variable_set" "workspace" {
   workspace_id    = each.value
 }
 
-data "tfe_outputs" "variable_set_variable" {
+module "variable_set_variable" {
+  source = "./modules/variable"
+
   for_each = { for k, v in var.variables : format("%s/%s", v.key, v.category) => v }
 
-  organization = var.organization
-  workspace    = each.value.workspace
-}
-
-resource "tfe_variable" "sensitive" {
-  for_each = {
-    for k, v in var.variables : format("%s/%s", v.key, v.category) => v
-    if v.sensitive == true
-  }
-
   category        = each.value.category
   description     = each.value.description
   hcl             = each.value.hcl
   key             = each.value.key
-  sensitive       = true
-  value           = data.tfe_outputs.variable_set_variable[each.key].values[each.value.value]
+  organization    = var.organization
+  sensitive       = each.value.sensitive
+  value           = each.value.value
   variable_set_id = tfe_variable_set.variable_set.id
-}
-
-resource "tfe_variable" "nonsensitive" {
-  for_each = {
-    for k, v in var.variables : format("%s/%s", v.key, v.category) => v
-    if v.sensitive != true
-  }
-
-  category        = each.value.category
-  description     = each.value.description
-  hcl             = each.value.hcl
-  key             = each.value.key
-  value           = data.tfe_outputs.variable_set_variable[each.key].nonsensitive_values[each.value.value]
-  variable_set_id = tfe_variable_set.variable_set.id
+  workspace       = each.value.workspace
 }

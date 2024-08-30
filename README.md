@@ -32,18 +32,17 @@ limitations under the License.
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_variable_set_variable"></a> [variable\_set\_variable](#module\_variable\_set\_variable) | ./modules/variable | n/a |
 
 ## Resources
 
 | Name | Type |
 |------|------|
 | [tfe_project_variable_set.project](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/project_variable_set) | resource |
-| [tfe_variable.nonsensitive](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
-| [tfe_variable.sensitive](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
 | [tfe_variable_set.variable_set](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable_set) | resource |
 | [tfe_workspace_variable_set.workspace](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_variable_set) | resource |
-| [tfe_outputs.variable_set_variable](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/outputs) | data source |
 | [tfe_project.project](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/project) | data source |
 | [tfe_workspace_ids.variable_set](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/workspace_ids) | data source |
 

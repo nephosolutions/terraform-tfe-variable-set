@@ -66,14 +66,6 @@ variable "variables" {
 
   nullable = false
   default  = []
-
-  validation {
-    condition = alltrue([
-      for variable in var.variables : contains(["env", "terraform"], variable.category)
-    ])
-
-    error_message = "Invalid variable category. Valid values are terraform or env."
-  }
 }
 
 variable "workspaces" {

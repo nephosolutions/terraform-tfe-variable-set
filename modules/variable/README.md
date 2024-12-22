@@ -49,7 +49,7 @@ No modules.
 | <a name="input_description"></a> [description](#input\_description) | Description of the variable. | `string` | `null` | no |
 | <a name="input_hcl"></a> [hcl](#input\_hcl) | Whether to evaluate the value of the variable as a string of HCL code. | `bool` | `false` | no |
 | <a name="input_key"></a> [key](#input\_key) | Name of the variable. | `string` | n/a | yes |
-| <a name="input_organization"></a> [organization](#input\_organization) | The name of the organization. | `string` | n/a | yes |
+| <a name="input_organization"></a> [organization](#input\_organization) | The name of the organization. | `string` | `null` | no |
 | <a name="input_sensitive"></a> [sensitive](#input\_sensitive) | Whether the value is sensitive. If true then the variable is written once and not visible thereafter. | `bool` | `false` | no |
 | <a name="input_value"></a> [value](#input\_value) | The workspace output to read the variable value from. | `string` | n/a | yes |
 | <a name="input_variable_set_id"></a> [variable\_set\_id](#input\_variable\_set\_id) | ID of the variable set that owns the variable. | `string` | n/a | yes |

@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.1] - 2024-12-22
+
+BUG FIXES:
+* `var.organization` may be `null`
+
 ## [2.0.0] - 2024-08-30
 
 BREAKING CHANGES:
@@ -13,6 +18,7 @@ BREAKING CHANGES:
 
 Initial release
 
-[Unreleased]: https://github.com/nephosolutions/terraform-tfe-variable-set/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/nephosolutions/terraform-tfe-variable-set/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/nephosolutions/terraform-tfe-variable-set/releases/tag/v2.0.1
 [2.0.0]: https://github.com/nephosolutions/terraform-tfe-variable-set/releases/tag/v2.0.0
 [1.0.0]: https://github.com/nephosolutions/terraform-tfe-variable-set/releases/tag/v1.0.0
